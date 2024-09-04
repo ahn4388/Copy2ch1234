@@ -1,0 +1,146 @@
+/* index.css - 메인 화면에 사용되는 스타일 */
+
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    font-size: 24px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"], textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* 가로 스크롤 컨테이너 스타일 */
+.scroll-container {
+    display: flex;
+    overflow-x: auto; /* 가로 스크롤 활성화 */
+    padding: 10px 0;
+    gap: 20px;
+    scroll-snap-type: x mandatory; /* 스크롤 스냅 기능 추가 */
+    -webkit-overflow-scrolling: touch; /* 모바일에서 부드러운 스크롤을 위해 추가 */
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px; /* 가로 스크롤바 높이 조정 */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+
+/* 주제 목록 스타일 */
+.topic-list {
+    flex-wrap: nowrap; /* 가로 스크롤을 위해 감싸지 않도록 설정 */
+}
+
+.topic-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 200px; /* 최소 너비 설정 */
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    scroll-snap-align: start; /* 스크롤 스냅 정렬 */
+    flex: 0 0 auto; /* 가로 스크롤이 가능하도록 설정 */
+}
+
+.topic-item:hover {
+    background-color: #f1f1f1;
+}
+
+.topic-item h3 {
+    margin-top: 0;
+}
+
+.topic-item p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.comment-count {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+    display: block;
+}
+
+/* 검색 영역 스타일 */
+#searchSection {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#searchInput, #searchType, #searchButton {
+    padding: 5px 10px; /* 검색창 높이 줄임 */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#searchButton {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+}
+
+#searchButton:hover {
+    background-color: #45a049;
+}
+
+/* MZ 주제 스타일 */
+.mz-topic-list {
+    flex-wrap: nowrap; /* 가로 스크롤을 위해 감싸지 않도록 설정 */
+}
+
+.mz-topic-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 200px; /* 최소 너비 설정 */
+    max-width: 250px; /* 최대 너비 설정 */
+    flex: 0 0 auto; /* 가로 스크롤이 가능하도록 설정 */
+    scroll-snap-align: start; /* 스크롤 스냅 정렬 */
+}
+
+.mz-topic-item:hover {
+    background-color: #f0f0f0;
+}
